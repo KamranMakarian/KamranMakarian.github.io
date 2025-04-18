@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="icon/favicon-32x32.png" />
+  <script defer src="script/script.js"></script>
+  <meta name="description" content="Kamran Makarian – Data Scientist with expertise in machine learning, engineering R&D, and data-driven solutions across sectors.">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Welcome to Kamran Makarian's Portfolio!</h1>
+    </header>
+    <nav>
+      <button id="theme-toggle" aria-label="Toggle light and dark theme">Background Theme</button>
+      <div class="nav-right">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="outreach.html">Outreach</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </nav>
+    <main>
+        <section id="contact">
+            <h2>📬 Get in Touch</h2>
+            <p class="contact-intro">
+              I’d love to hear from you — whether you're interested in collaborating, have questions about my work, or simply want to connect around data science, machine learning, or research.  
+              Please fill out the form below and I’ll get back to you as soon as I can.
+            </p>
+          
+            <form id="contact-form" action="https://formspree.io/f/mwpldkop" method="POST">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your name" />
+          
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email" />
+              <small id="email-error" class="error-msg"></small>
+          
+              <label for="subject">Subject <span class="required">*</span></label>
+              <input type="text" id="subject" name="subject" required placeholder="Enter a subject" />
+
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="13" required required placeholder="Enter your message"></textarea>
+              <small id="word-count" class="word-counter">0 / 250 words</small>
+          
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_gotcha" style="display:none">
+              <input type="hidden" name="_subject" value="New message from KamranMakarian.com contact form">
+
+              <button type="submit">Send Message</button>
+
+              <div id="form-response" style="display:none; color: green; margin-top: 1rem;">
+                ✅ Thank you! Your message has been sent.
+              </div>              
+            </form>
+          </section>
+          
+    </main>
+    <footer>
+      &copy; 2025 Kamran Makarian. All rights reserved.
+      <br />
+      <a href="https://www.linkedin.com/in/kamranmakarian" target="_blank" rel="noopener noreferrer">
+        <img src="icon/linkedin.svg" alt="LinkedIn icon" style="height: 16px; vertical-align: middle; margin-right: 4px;" />
+        LinkedIn
+      </a>
+      |
+      <a href="https://github.com/KamranMakarian" target="_blank" rel="noopener noreferrer">
+        <img src="icon/github.svg" alt="GitHub icon" style="height: 16px; vertical-align: middle; margin-right: 4px;" />
+        GitHub
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
