@@ -108,5 +108,43 @@ function toggleTheme() {
     setupEmailValidation();
     setupWordCount();
     setupFormSubmission();
+
+    // Timeline card click logic
+    document.querySelectorAll(".timeline-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const title = card.dataset.title || "";
+        const org = card.dataset.org || "";
+        const loc = card.dataset.loc ? `📍 ${card.dataset.loc}` : "";
+        const years = card.dataset.years || "";
+        const rawDescription = card.dataset.description || "";
+
+        // Convert \n bullets to list
+        const bullets = rawDescription
+          .split("\n")
+          .filter(line => line.trim().length > 0)
+          .map(b => `<li>${b.replace(/^[-•]\s*/, "")}</li>`)
+          .join("");
+
+        document.getElementById("modal-title").textContent = title;
+        document.getElementById("modal-org").innerHTML = `${org}<br><span class="modal-loc">${loc}</span>`;
+        document.getElementById("modal-years").textContent = years;
+        document.getElementById("modal-description").innerHTML = `<ul>${bullets}</ul>`;
+
+        document.getElementById("timeline-modal").classList.remove("hidden");
+      });
+    });
+
+    document.getElementById("close-modal").addEventListener("click", () => {
+      document.getElementById("timeline-modal").classList.add("hidden");
+    });
+
+    // Close modal when clicking outside of modal-content
+    document.getElementById("timeline-modal").addEventListener("click", (e) => {
+      const modalContent = document.querySelector(".modal-content");
+      if (!modalContent.contains(e.target)) {
+        document.getElementById("timeline-modal").classList.add("hidden");
+      }
+    });
+    
   });
   
