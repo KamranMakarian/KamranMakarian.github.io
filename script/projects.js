@@ -17,7 +17,7 @@ const projects = [
     },
     {
       title: "Geospatial Data Science for Solar Energy Optimization (2024)",
-      description: "Supervised a development team to deliver actionable insights policymakers solar rebate distribution in Delaware.",
+      description: "Supervised a development team to deliver actionable insights to policymakers solar rebate distribution in Delaware.",
       link: "https://nbe-phase2.pages.dev/",
       tech: ["Geopandas", "Pygris", "Scikit-Learn", "Statsmodels", "Azure", "JavaScript", "CSS", "HTML"]
     },
@@ -45,14 +45,16 @@ function renderProjects(searchTerm = "") {
     if (!gallery) return;
 
     gallery.innerHTML = "";
-  
+
+    const lowerSearchTerm = searchTerm.toLowerCase();
+
     const filtered = projects.filter(project => {
         const combined = (
             project.title +
             project.description +
             project.tech.join(" ")
           ).toLowerCase();
-      return combined.includes(searchTerm.toLowerCase());
+      return combined.includes(lowerSearchTerm);
     });
 
     if (filtered.length === 0) {
