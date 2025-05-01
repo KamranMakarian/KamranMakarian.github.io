@@ -17,6 +17,7 @@ body {
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -29,17 +30,54 @@ html, body {
     overflow-x: hidden;
 }
 
+.page-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+header h1 {
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+header h2 {
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+
 /* =============
     Header
 ================ */
 header {
-    background-color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 h1, h2, h3 {
@@ -70,11 +108,6 @@ nav {
     color: #ffd700;
 }
   
-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
 /* ====================
     About Page
 ======================= */
@@ -84,11 +117,14 @@ section {
 }
 
 .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 90%;
+  margin: 0 auto 2.5rem auto;
 }
+
   
 .about-text {
     flex: 1 1 60%;
@@ -96,7 +132,7 @@ section {
 
 /* Add space between all paragraphs */
 .about-text p {
-    margin-bottom: 1.0rem;
+    margin-bottom: 2.0rem;
 }
 
 /* Add spacing between headers and their following content */
@@ -147,11 +183,6 @@ section {
     }
 }
  
-.about-content {
-    max-width: 90%; 
-    margin: 0 auto 2.5rem auto;
-  }
-
 /* ====================
     Project Gallery
 ======================= */
@@ -288,6 +319,104 @@ section {
   text-decoration: underline;
 }
 
+/*============== 
+Certifications 
+===============*/
+
+.cert-section {
+  margin-bottom: 0.5rem;
+}
+
+.cert-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cert-section a {
+  color: #007BFF;
+  font-weight: 500;
+}
+
+.cert-section a:hover{
+  text-decoration: underline;
+}
+
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cert-table th, .cert-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.cert-table th {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+}
+
+.cert-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.cert-table tbody tr:hover {
+  background-color: #f0f8ff; /* light blue tint on hover */
+  transition: background-color 0.3s ease;
+}
+
+.cert-icon {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+  .cert-table, .cert-table th, .cert-table td {
+    font-size: 0.9rem;
+  }
+}
+
+.cert-table td:first-child,
+.cert-table th:first-child {
+    width: 60px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.cert-table td:first-child img {
+  vertical-align: middle;
+}
+
+/* INTRO SPECIAL STYLE */
+.intro-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 1rem 0 1rem;
+  text-align: left;
+}
+
+.cert-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0.5rem; /* spacing after the intro paragraph */
+}
+
+body.dark-mode .cert-intro {
+  color: #ccc;
+}
+
+body.dark-mode .intro-section h2 {
+  color: #f5f5f5;
+}
+
+
 /* ====================
    Contact Page Styling
 ======================= */
@@ -295,7 +424,6 @@ section {
 #contact {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
     text-align: left;
   }
   
@@ -416,10 +544,6 @@ footer a:hover {
 footer i {
   margin-right: 0.3rem;
 }
-
-/* footer a img {
-  filter: brightness(0) invert(1);
-} */
 
 footer a:hover img {
   filter: brightness(1.5);
@@ -552,11 +676,6 @@ section {
     margin: 0 auto;
   }
   
-
-h1, h2 {
-    margin-bottom: 1rem;
-}
-  
 .view-link {
     display: inline-block;
     margin-top: 1rem;
@@ -604,13 +723,12 @@ img {
   Timeline Style
   ==================*/
 
-  #timeline-container {
-    padding: 2rem;
-    background: #f5f5f5;
-    position: relative;
-    overflow: hidden;
+  #timeline-container h2 {
+    text-align: center;
+    margin-bottom: 2rem; /* or whatever fits your visual rhythm */
   }
   
+ 
   .timeline {
     position: relative;
     width: 100%;
@@ -759,97 +877,3 @@ img {
 
 
 
-/*============== 
-Certifications 
-===============*/
-
-.cert-section {
-  margin-bottom: 0.5rem;
-}
-
-.cert-section h2 {
-  margin-bottom: 1rem;
-}
-
-.cert-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.cert-table th, .cert-table td {
-  padding: 0.8rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.cert-table th {
-  background-color: #007BFF;
-  color: white;
-  font-weight: bold;
-}
-
-.cert-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.cert-table tbody tr:hover {
-  background-color: #f0f8ff; /* light blue tint on hover */
-  transition: background-color 0.3s ease;
-}
-
-.cert-icon {
-  height: 24px;
-  width: 24px;
-  object-fit: contain;
-}
-
-@media screen and (max-width: 600px) {
-  .cert-table, .cert-table th, .cert-table td {
-    font-size: 0.9rem;
-  }
-}
-
-.cert-table td:first-child,
-.cert-table th:first-child {
-    width: 60px;
-    min-width: 60px;
-    text-align: center;
-}
-
-.cert-table td:first-child img {
-  vertical-align: middle;
-}
-
-/* GENERAL SECTION STYLE (EXCEPT INTRO) */
-section:not(.intro-section) {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* INTRO SPECIAL STYLE */
-.intro-section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem 1rem 0 1rem;
-  text-align: left;
-}
-
-.cert-intro {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 3rem; /* spacing after the intro paragraph */
-}
-
-body.dark-mode .cert-intro {
-  color: #ccc;
-}
-
-body.dark-mode .intro-section h2 {
-  color: #f5f5f5;
-}
