@@ -15,7 +15,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color: #cef5f8;
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -71,7 +71,7 @@ h2 {
     Header
 ================ */
 header {
-  background-color: #fff;
+  background-color: #c4f8c6;
   text-align: center;
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
