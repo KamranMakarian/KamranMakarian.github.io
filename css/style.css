@@ -49,6 +49,7 @@ header h1 {
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  font-family: 'Kalam', cursive;
 }
 
 
@@ -60,10 +61,13 @@ header h2 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  font-family: 'Kalam', cursive;
 }
 
 h2 {
   margin-bottom: 1rem;
+  /* font-family: 'Oswald', sans-serif; */
+  /* font-family: 'Kalam', cursive; */
 }
 
 
@@ -251,10 +255,19 @@ nav {
     /* max-width: 90%;  */
     margin: 0 auto 2.5rem auto;
   }
+
+.project-intro a {
+  color: #007BFF;
+  font-weight: 500;
+}
   
-  .project-intro p {
-    margin-bottom: 1.25rem;
-  }
+.project-intro p {
+  margin-bottom: 1.25rem;
+}
+
+.project-intro a:hover {
+  text-decoration: underline;
+}
   
   .project-intro ul {
     padding-left: 1.5rem;
