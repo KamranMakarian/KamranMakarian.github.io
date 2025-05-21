@@ -3,6 +3,13 @@
 // ===============================
 
 const projects = [
+  {
+    title: "AutoClassifier Hub, Full-Stack ML Application (2025)",
+    description: "A full-stack capstone demo project enabling users to train, manage, and deploy ML classification models and ANN without coding.",
+    link: "https://github.com/KamranMakarian/auto-classifier-hub",
+    tech: ["Scikit-Learn", "Keras", "FastAPI", "PostgreSQL", "Vue"]
+
+  },
     {
       title: "AI-Powered Resume Parsing RESTful API backend (2025)",
       description: "A demo project showcasing how to build a secure AI powered API that connects to a PostgreSQL database.",

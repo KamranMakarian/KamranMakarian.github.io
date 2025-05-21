@@ -13,13 +13,14 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  background-color: #cef5f8;
+  /* background-color: #cef5f8; */
+  background: linear-gradient(145deg, #cef5f8 0%, #59eef9 100%);
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 3.5rem;
 }
-
 
 a {
     text-decoration: none;
@@ -66,8 +67,12 @@ header h2 {
 
 h2 {
   margin-bottom: 1rem;
-  /* font-family: 'Oswald', sans-serif; */
-  /* font-family: 'Kalam', cursive; */
+}
+
+section + section {
+  border-top: 1px solid #007BFF;
+  margin-top: 3rem;
+  padding-top: 3rem;
 }
 
 
@@ -77,9 +82,8 @@ h2 {
 header {
   background-color: #f7f7f0;
   text-align: center;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  padding: .8rem 0;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   top: 0;
   z-index: 100;
 }
@@ -93,18 +97,30 @@ h1, h2, h3 {
     Navigation
 =============== */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 2rem;
-    background-color: #333;
-    color: white;
+  position: fixed;
+  top: 0;                 /* NEW: defines where it sticks */
+  left: 0;
+  width: 100%;
+  z-index: 1000;          /* NEW: ensures it's above other elements */
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 4rem;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  transition: color 0.5s;
+  
 }
 
 .nav-right a {
-    margin-right: 1rem;
-    color: white;
-    font-weight: bold;
+  margin-right: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-right a:hover {
+  text-decoration: underline;
 }
 
 .nav-right a.active {
@@ -252,9 +268,8 @@ nav {
 }
 
 .project-intro {
-    /* max-width: 90%;  */
-    margin: 0 auto 2.5rem auto;
-  }
+  margin: 0 auto 2.5rem auto;
+}
 
 .project-intro a {
   color: #007BFF;
@@ -409,14 +424,6 @@ Certifications
 .cert-table td:first-child img {
   vertical-align: middle;
 }
-
-/* INTRO SPECIAL STYLE */
-/* .intro-section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 2rem 1rem 0 1rem;
-  text-align: left;
-} */
 
 .cert-intro {
   font-size: 1.1rem;
@@ -603,9 +610,10 @@ footer a:hover img {
 /* =======================
     Dark Mode
 ========================== */
+
 body.dark-mode {
-    background-color: #111;
-    color: #f5f5f5;
+  background: linear-gradient(145deg, #111 0%, #222 100%);
+  color: #f5f5f5;
 }
 
 body.dark-mode nav,
