@@ -28,7 +28,8 @@
 
     <nav role="navigation">
       <button id="theme-toggle" aria-label="Toggle light and dark theme">Background Theme</button>
-      <div class="nav-right">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+      <div class="nav-right" id="nav-links">
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="outreach.html" class="active">Outreach</a>
@@ -38,41 +39,108 @@
     </nav>
 
     <main>
-      <section id="outreach" class="page-section outreach-section">
+      <section id="intro-outreach" class="page-section outreach-section">
         <h2>🌍 Outreach & Open Source</h2>
         <p>
           I’m passionate about using my technical skills to support mission-driven organizations, make data science accessible, and contribute to the open-source and academic community. Here’s a sample of my outreach activities:
         </p>
-
-        <ul>
-          <li>
-            🧩 <strong>Consultancy:</strong>
-            <a href="https://www.catchafire.org/profiles/3165378/about/" target="_blank" rel="noopener">
-              Volunteer consulting portfolio on Catchafire
-            </a>
-          </li>
-
-          <li>
-            📝 <strong>Blog Post:</strong>
-            <a href="https://techimpact.org/news/machine-learning-source-good-empowering-nonprofits-through-data-driven-innovation" target="_blank" rel="noopener">
-              Machine Learning as a Source of Good: Empowering Nonprofits Through Data-Driven Innovation
-            </a>
-          </li>
-
-          <li>
-            🎤 <strong>Webinar:</strong>
-            <a href="https://techimpact.org/trainings/empowering-nonprofits-introduction-machine-learning-applications-0" target="_blank" rel="noopener">
-              Empowering Nonprofits: An Introduction to Machine Learning Applications
-            </a>
-          </li>
-
-          <li>
-            📚 <strong>Academic Research:</strong>
-            <a href="https://orcid.org/0000-0003-0751-8382" target="_blank" rel="noopener">ORCiD</a> and
-            <a href="https://scholar.google.com/citations?user=W0_wKTUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> profiles featuring peer-reviewed publications
-          </li>
-        </ul>
       </section>
+
+      <section id="consultancy" class="page-section outreach-section">
+        <h3>📞 Consultancy</h3><br/>
+        <p>I provide AI and data analysis consulting to mission-driven organizations through platforms like Catchafire.org. My work includes training professionals, developing predictive models, and building interactive dashboards to support social impact initiatives — saving over $18,000 in project value since Jan. 2025.</p>
+        <p>
+          <a href="https://www.catchafire.org/profiles/3165378/about/" target="_blank" rel="noopener">
+          👉 View my volunteer consulting portfolio on Catchafire
+          </a>
+        </p>
+      </section>
+      
+      <section id="thought-leadership" class="page-section outreach-section">
+        <h3>💡 Thought Leadership</h3><br />
+        <p>I actively contribute to public discourse on ethical and impactful data science through writing and speaking engagements:</p>
+        <p>
+          <a href="https://techimpact.org/news/machine-learning-source-good-empowering-nonprofits-through-data-driven-innovation" target="_blank" rel="noopener">
+            📝 Blog Post: Machine Learning as a Source of Good
+          </a>
+        </p>
+        <p>
+          <a href="https://techimpact.org/trainings/empowering-nonprofits-introduction-machine-learning-applications-0" target="_blank" rel="noopener">
+            🎤 Webinar: Empowering Nonprofits – Intro to Machine Learning
+          </a>
+        </p>
+      </section>        
+
+      <section id="academic-research" class="page-section outreach-section">
+        <h3>🎓 Academic Research & Peer Review</h3><br />
+        <p>I maintain active research profiles showcasing my peer-reviewed contributions in computational modeling, machine learning, and interdisciplinary engineering:</p>
+        <p>
+          <a href="https://orcid.org/0000-0003-0751-8382" target="_blank" rel="noopener">
+          ➡️ ORCiD Profile
+          </a>
+        </p>
+        <p>
+          <a href="https://scholar.google.com/citations?user=W0_wKTUAAAAJ&hl=en" target="_blank" rel="noopener">
+            ➡️ Google Scholar Profile
+          </a>
+        </p>
+      </section>
+
+      <section id="testimonials" class="page-section outreach-section">
+        <h3>🏆 Endorsements & Testimonials</h3><br/>
+
+          <div class="testimonial-block">
+            <em>"{Kamran's} expertise in all things data is invaluable... We discussed data organization and visualization best practices and how I can adapt the work I've been doing to be more efficient."</em><br />
+            <div class="endorser">
+              — <strong>Jeehae P., Data Coordinator</strong> (Client via Catchafire) <br />
+              <a href="https://www.catchafire.org/impact/match/3969071/nj-leep--data---analytics/" target="_blank" rel="noopener">View full endorsement</a>
+            </div>
+          </div>
+          
+
+          <div class="testimonial-block">
+            <em>"One of Kamran's best qualities is that he can disentangle complex matters, identifying valuable insights... His dedication to generalizability is notable."</em><br />
+            <div class="endorser">
+              — <strong>Hec Maldonado-Reis, AM, MPH</strong> (Manager, Tech Impact, 2022–2023) <br />
+              <a href="https://www.linkedin.com/in/kamranmakarian" target="_blank" rel="noopener">View on LinkedIn</a>
+            </div>
+          </div>
+
+
+          <div class="testimonial-block">
+            <em>"{Kamran’s} technical and analytical capacities are impeccable... He pushed us to think differently and always adapted to our ideas."</em><br />
+            <div class="endorser">
+              — <strong>Christina Alexander</strong> (Client, Tech Impact, 2022–2023) <br />
+              <a href="https://www.linkedin.com/in/kamranmakarian" target="_blank" rel="noopener">View on LinkedIn</a>
+            </div>
+          </div>
+
+
+          <div class="testimonial-block">
+            <em>"{Kamran’s} mentorship helped me level up in multiple areas... It was a great honor to publish work with him."</em><br />
+            <div class="endorser">
+              — <strong>Ahmed M. H. Ibrahim, Ph.D.</strong> (Drexel University mentee, 2019–2021) <br />
+              <a href="https://www.linkedin.com/in/kamranmakarian" target="_blank" rel="noopener">View on LinkedIn</a>
+            </div>
+          </div>
+
+
+          <div class="testimonial-block">
+            <em>"Kamran was extremely helpful and knowledgeable... I hope to work with him again!"</em><br />
+            <div class="endorser">
+              — <strong>Colleen M., Executive Director</strong> (Client via Catchafire) <br />
+              <a href="https://www.catchafire.org/impact/match/4013690/volunteer-center-of-washington-county--inc---data---analytics/" target="_blank" rel="noopener">View full endorsement</a>
+            </div>
+          </div>
+      </section>
+
+      <section id="collaboration" class="page-section outreach-section">
+        <h3>🤝 Let’s Collaborate</h3><br />
+        <p>If you're a nonprofit, startup, or academic group seeking to amplify your impact through data-driven solutions, I’d love to hear from you.</p>
+        <p>
+          <a href="contact.html">📬 Get in touch via the Contact page</a>
+        </p>
+      </section>    
     </main>
 
     <footer>

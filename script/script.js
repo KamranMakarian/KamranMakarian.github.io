@@ -159,10 +159,19 @@ document.addEventListener("DOMContentLoaded", () => {
   loadTheme();
 
   const themeToggle = document.getElementById("theme-toggle");
+  const navToggle = document.getElementById("nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+
   if (themeToggle) {
     themeToggle.addEventListener("click", toggleTheme);
   }
 
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+  
   setupEmailValidation();
   setupWordCount();
   setupFormSubmission();
